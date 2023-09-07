@@ -5,6 +5,8 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:new_mantra/config/routes.dart';
 import 'package:new_mantra/helper/appimage.dart';
 import 'package:new_mantra/helper/getText.dart';
+import 'package:new_mantra/login_screen/login_screen.dart';
+import 'package:new_mantra/select_type_screen/select_type_screen.dart';
 
 import '../utils/color_constant.dart';
 import '../utils/constants.dart';
@@ -97,7 +99,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   onTap: () {
                     setState(() {});
                     _currentPage == _onboardingData.length - 1
-                        ? Get.toNamed(AppRoutes.selectTypeScreen)
+                        ? Navigator.of(context).push(MaterialPageRoute(builder: (context) => SelectTypeScreen()))
                         : _pageController.jumpToPage(_currentPage + 1);
                   },
                   child: Align(
@@ -122,8 +124,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   {
                     setState(() {});
                     _currentPage == _onboardingData.length - 1
-                        ? Get.toNamed(AppRoutes.selectTypeScreen)
-                        : _pageController.jumpToPage(_currentPage + 1);
+                        ?     Navigator.of(context).push(MaterialPageRoute(builder: (context) => SelectTypeScreen()))
+
+                    : _pageController.jumpToPage(_currentPage + 1);
                   },
                   child: Align(
                     alignment: Alignment.bottomRight,

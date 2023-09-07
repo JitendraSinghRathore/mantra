@@ -11,30 +11,43 @@ class AppImages {
 
   static const expertIcon = 'assets/icons/expert.png';
   static const userIcon  = 'assets/icons/user.png';
+  static const backIcon  = 'assets/icons/back_icon.png';
+  static const lockIcon  = 'assets/icons/lock.png';
 
 
-
-  static const dashboard1Icon = 'assets/images/dashboard1.png';
-  static const dashboard2Icon = 'assets/images/dashboard2.png';
-  static const dashboard3Icon = 'assets/images/dashboard3.png';
-  static const dashboard4Icon = 'assets/images/dashboard4.png';
-  static const drawrIcon = 'assets/images/drawer.png';
-  static const notificationIcon = 'assets/images/notification.png';
+  ///Home Screen
+  static const drawerIcon = 'assets/images/drawer.png';
   static const walletIcon = 'assets/images/wallet.png';
-  static const addMoneyIcon = 'assets/images/addmoney.png';
-  static const withdrawIcon = 'assets/images/withdraw.png';
-  static const arrowRightIcon = 'assets/images/arrow_right.png';
-  static const cameraIcon = 'assets/images/camera.png';
-  static const closeIcon = 'assets/images/close.png';
-  // static const userIcon = 'assets/images/user.png';
-  static const drawer1Icon = 'assets/images/drawer1.png';
-  static const drawer2Icon = 'assets/images/drawer2.png';
-  static const drawer3Icon = 'assets/images/drawer3.png';
-  static const drawer4Icon = 'assets/images/drawer4.png';
-  static const drawer5Icon = 'assets/images/drawer5.png';
-  static const drawer6Icon = 'assets/images/drawer6.png';
-  static const drawer7Icon = 'assets/images/drawer7.png';
-  static const drawer8Icon = 'assets/images/drawer8.png';
-  static const keyboardArrowRightIcon =
-      'assets/images/keyboard_arrow_right.png';
+  static const homePhone  = 'assets/icons/phone.png';
+  static const homeExp  = 'assets/icons/exprance.png';
+  static const ruppesExp  = 'assets/icons/rs.png';
+  static const onlineUser = 'assets/images/online_img.png';
+  static const astrology = 'assets/icons/astrology.png';
+
+
+
+
+
+
+
+  //Drawer
+  static const drawerUser = 'assets/images/drawer_user.png';
+  static const drawerHome  = 'assets/icons/home.png';
+  static const drawerWallet  = 'assets/icons/wallet.png';
+  static const drawerPayment  = 'assets/icons/payment.png';
+  static const drawerUsers  = 'assets/icons/users.png';
+  static const drawerSupport  = 'assets/icons/help.png';
+  static const drawerTerms  = 'assets/icons/terms.png';
+
+
+
+
+
+
+
+
+
+
+
+
 }

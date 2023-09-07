@@ -17,12 +17,13 @@ class CustomTextfield extends StatefulWidget {
   bool? isObscureText;
   final TextInputType textInputType;
 
+  AutovalidateMode? auto;
   final isReadOnly;
   CustomTextfield(
       {key,
       required this.hintText, this.validator, required this.controller,
       this.textInputType = TextInputType.text, this.inputFormatters,
-      this.prefix, this.suffix, this.isObscureText = false, this.isReadOnly = false});
+      this.prefix, this.suffix, this.isObscureText = false, this.isReadOnly = false,this.auto,});
   @override
   State<CustomTextfield> createState() => _CustomTextfieldState();
 }
@@ -39,7 +40,7 @@ class _CustomTextfieldState extends State<CustomTextfield> {
         controller: widget.controller,
         keyboardType: widget.textInputType,
         cursorColor: Colors.black,
-
+        autovalidateMode: widget.auto,
         // autovalidateMode: AutovalidateMode.onUserInteraction,
         validator: widget.validator,
 
@@ -61,20 +62,22 @@ class _CustomTextfieldState extends State<CustomTextfield> {
           filled: true,
           hintText: widget.hintText,
           prefixIcon: widget.prefix,
+
           suffixIcon:widget.suffix,
           hintStyle: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w400,
               fontFamily: celiaRegular,
-              color: ColorConstant.hintColor),
-          border: OutlineInputBorder(
+              color: ColorConstant.black2),
+         border: InputBorder.none,
+         /* border: OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorConstant.whiteColor,
+                color: ColorConstant.black2,
               ),
               borderRadius: BorderRadius.circular(8)),
           enabledBorder: OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorConstant.naviBlueColor,
+                color: Colors.grey,
               ),
               borderRadius: BorderRadius.circular(8)),
           errorBorder:  OutlineInputBorder(
@@ -85,7 +88,7 @@ class _CustomTextfieldState extends State<CustomTextfield> {
               borderSide: const BorderSide(
                 color: ColorConstant.naviBlueColor,
               ),
-              borderRadius: BorderRadius.circular(8)),
+              borderRadius: BorderRadius.circular(8)),*/
         ),
       ),
     );

@@ -11,17 +11,20 @@ AppBar appBar(BuildContext context, String title, Function() onTap) {
     backgroundColor: ColorConstant.white,
     elevation: 0,
     leadingWidth: 30,
-    leading: Container(
-        height: 28,
-        width: 28,
-        alignment: Alignment.centerRight,
-        child: GestureDetector(
-            onTap: onTap,
-            child: Image.asset(
-              AppImages.leftImage,
-              height: 28,
-              width: 28,
-            ))),
+    leading: Padding(
+      padding: const EdgeInsets.only(left: 10),
+      child: Container(
+          height: 28,
+          width: 28,
+          alignment: Alignment.centerRight,
+          child: GestureDetector(
+              onTap: onTap,
+              child: Image.asset(
+                AppImages.backIcon,
+                height: 28,
+                width: 28,
+              ))),
+    ),
     title: getText(
         title: title,
         size: 17,

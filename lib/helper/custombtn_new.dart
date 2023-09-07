@@ -5,7 +5,7 @@ import '../utils/color_constant.dart';
 import '../utils/constants.dart';
 import 'getText.dart';
 
-class CustomBtn2 extends StatefulWidget {
+class CustomBtnNew extends StatefulWidget {
   final String title;
   final double height;
   final double width;
@@ -13,7 +13,7 @@ class CustomBtn2 extends StatefulWidget {
   final bool isLoading;
 
   final Function() onTap;
-  const CustomBtn2(
+  const CustomBtnNew(
       {key,
       required this.title,
       required this.height,
@@ -23,24 +23,20 @@ class CustomBtn2 extends StatefulWidget {
       this.isLoading = false});
 
   @override
-  State<CustomBtn2> createState() => _CustomBtn2State();
+  State<CustomBtnNew> createState() => _CustomBtnNewState();
 }
 
-class _CustomBtn2State extends State<CustomBtn2> {
+class _CustomBtnNewState extends State<CustomBtnNew> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-           elevation: 0,
-          backgroundColor: widget.isLoading ? ColorConstant.c3Color : widget.color,
-          side: const BorderSide(
-            width: 2.0,
-            color: ColorConstant.buttonBorder,
-          ),
-          shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(23,),
-              )),
 
+      style: ElevatedButton.styleFrom(
+elevation: 0,
+          backgroundColor: widget.isLoading ? ColorConstant.c3Color : widget.color,
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: ColorConstant.buttonBorder,width: 1.3),
+            borderRadius: BorderRadius.circular(23),)),
       onPressed: widget.onTap,
       child: Container(
         alignment: Alignment.center,
@@ -56,16 +52,16 @@ class _CustomBtn2State extends State<CustomBtn2> {
                     margin: const EdgeInsets.only(right: 10),
                     alignment: Alignment.center,
                     child: const CircularProgressIndicator(
-                      color: Colors.black87,
+                      color: Colors.white,
                     ),
                   )
                 : Container(),
             getText(
                 title: widget.title,
                 size: 14,
-                fontFamily: celiaBold,
+                fontFamily: celiaRegular,
                 color: ColorConstant.blackColor,
-                fontWeight: FontWeight.w700),
+                fontWeight: FontWeight.w600),
           ],
         ),
       ),

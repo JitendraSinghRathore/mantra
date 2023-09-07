@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 
+import '../../config/routes.dart';
 import '../../utils/size_config.dart';
 class LoginController extends GetxController {
-  final numberController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
   final checkBoxValue = false.obs;
@@ -20,6 +21,7 @@ class LoginController extends GetxController {
 
   validation() async {
     if (formKey.currentState!.validate()) {
+
       //loginApiFunction();
     }
   }

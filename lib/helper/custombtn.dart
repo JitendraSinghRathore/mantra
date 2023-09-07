@@ -31,11 +31,10 @@ class _CustomBtnState extends State<CustomBtn> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          // elevation: 0,
-          backgroundColor:
-              widget.isLoading ? ColorConstant.c3Color : widget.color,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(23))),
+
+          backgroundColor: widget.isLoading ? ColorConstant.c3Color : widget.color,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(23),)),
       onPressed: widget.onTap,
       child: Container(
         alignment: Alignment.center,

@@ -4,9 +4,12 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 
 import '../../utils/size_config.dart';
-class ForgotPasswordController extends GetxController {
+class RegisterAccountController extends GetxController {
+  final fullNameController = TextEditingController();
   final numberController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final conformPasswordController = TextEditingController();
   final forgotPasswordFormKey = GlobalKey<FormState>();
   final checkBoxValue = false.obs;
   final passwordVisible = true.obs;

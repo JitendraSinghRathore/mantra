@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_mantra/helper/appimage.dart';
-import 'package:new_mantra/helper/custombtn2.dart';
 import '../config/routes.dart';
 import '../helper/custombtn.dart';
+import '../helper/custombtn_new.dart';
 import '../helper/getText.dart';
 import '../utils/color_constant.dart';
 import '../utils/constants.dart';
@@ -94,11 +94,11 @@ class SelectTypeScreen extends GetView<SelectTypeController> {
 
   Widget button2(String title, ) {
     return Flexible(
-        child: CustomBtn2(
+        child: CustomBtnNew(
             title: title,
             height: 45,
             width: double.infinity,
-            color: ColorConstant.white,
+            color: ColorConstant.whiteColor,
             onTap: () {
 
             }));

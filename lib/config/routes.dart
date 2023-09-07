@@ -4,6 +4,10 @@ class AppRoutes {
   static var selectTypeScreen = '/selectTypeScreen';
   static var loginScreen = '/loginScreen';
   static var forgotPasswordScreen = '/forgotPasswordScreen';
+  static var registerAccountScreen = '/registerAccountScreen';
+  static var homeScreen = '/homeScreen';
+
+
 
 
 
