@@ -57,9 +57,9 @@ class _CustomBtnState extends State<CustomBtn> {
             getText(
                 title: widget.title,
                 size: 14,
-                fontFamily: celiaBold,
+                fontFamily: celiaRegular,
                 color: ColorConstant.white,
-                fontWeight: FontWeight.w700),
+                fontWeight: FontWeight.w400),
           ],
         ),
       ),

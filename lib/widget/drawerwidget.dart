@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../config/routes.dart';
 import '../helper/appimage.dart';
 import '../helper/getText.dart';
-import '../home_screen/controller/home_controller.dart';
+import '../homeScreen/dashboard_screen/controller/dashboard_controller.dart';
 import '../utils/color_constant.dart';
 import '../utils/constants.dart';
 import '../utils/screensize.dart';
 
-drawer(BuildContext context, HomeController homeController) {
+drawer(BuildContext context, DashboardController dashboardController,) {
   return Container(
     width: MediaQuery.of(context).size.width - 70,
     height: double.infinity,
-    color: ColorConstant.drawerColour.withOpacity(0.99),
+    color: ColorConstant.commonColor.withOpacity(0.99),
     child: Column(
       children: [
-
         ScreenSize.height(50),
         Padding(
           padding: const EdgeInsets.only(left: 21),
@@ -31,9 +31,15 @@ drawer(BuildContext context, HomeController homeController) {
                     decoration: BoxDecoration(
                         shape: BoxShape.circle, color: ColorConstant.white),
                     child:
-                      const CircleAvatar(
-                        radius: 48, // Image radius
-                        backgroundImage: AssetImage(AppImages.drawerUser,),
+                      GestureDetector(
+                        onTap: ()
+                        {
+                          Get.toNamed(AppRoutes.profileScreen);
+                        },
+                        child: const CircleAvatar(
+                          radius: 48, // Image radius
+                          backgroundImage: AssetImage(AppImages.drawerUser,),
+                        ),
                       )
                   ),
                   SizedBox(height: 10,),
@@ -67,15 +73,30 @@ drawer(BuildContext context, HomeController homeController) {
           child: Column(
             children: [
               ScreenSize.height(20),
-              drawerItemWidget(drawerHome, AppImages.drawerHome, () {}),
+              drawerItemWidget(drawerHome, AppImages.drawerHome, () {
+                Get.back();
+                dashboardController.selectIndex.value=0;
+              }),
               ScreenSize.height(10),
-              drawerItemWidget(drawerWallet, AppImages.drawerWallet, () {}),
+              drawerItemWidget(drawerWallet, AppImages.drawerWallet, () {
+                Get.back();
+                dashboardController.selectIndex.value=1;
+              }),
               ScreenSize.height(10),
-              drawerItemWidget(drawerPayment, AppImages.drawerPayment, () {}),
+              drawerItemWidget(drawerPayment, AppImages.drawerPayment, () {
+                Get.back();
+                dashboardController.selectIndex.value=2;
+              }),
               ScreenSize.height(10),
-              drawerItemWidget(drawerProfile, AppImages.drawerUsers, () {}),
+              drawerItemWidget(drawerProfile, AppImages.drawerUsers, () {
+                Get.back();
+                dashboardController.selectIndex.value=3;
+              }),
               ScreenSize.height(10),
-              drawerItemWidget(drawerSupport, AppImages.drawerSupport, () {}),
+              drawerItemWidget(drawerSupport, AppImages.drawerSupport, () {
+                Get.back();
+                dashboardController.selectIndex.value=4;
+              }),
               ScreenSize.height(10),
               drawerItemWidget(drawerTerms, AppImages.drawerTerms, () {}),
               /*ScreenSize.height(5),

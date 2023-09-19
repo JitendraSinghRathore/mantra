@@ -28,7 +28,6 @@ class ColorConstant {
   static const refundReceivedColor = Color(0xffB88E0F);
 
   ///Current app Color
-  static const naviBlue = Color(0xff0096ff);
   static const drawerColour = Color(0xff0060A4);
 
 
@@ -39,6 +38,26 @@ class ColorConstant {
   static const drawerEmail = Color(0xffB7B7B7);
   static const homeExp = Color(0xff606060);
   static const homeBackground = Color(0xffF6F6F6);
+  static const addMoney = Color(0xffDDDEDF);
+  static const cardBack = Color(0xffE7EAFA);
+
+
+  static const noData = Color(0xff949393);
+
+
+  static const commonColor = Color(0xffF05368);
+  static const lightBlack = Color(0xff383838);
+  static const naviBlue = Color(0xff0060A4);
+  static const detailsBackCard = Color(0xffE2E1EA);
+
+
+
+
+
+
+
+
+
 
 
 

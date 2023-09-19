@@ -90,6 +90,18 @@ const String drawerProfile = "My Profile";
 const String drawerSupport = "Help & Support";
 const String drawerTerms = "Terms & Conditions";
 
+//Profile Screen
+const String profileUpdateBtn = "Update";
+const String profileChangePassword = "Change Password";
+
+
+//ChangePassword Screen
+const String changePasswordOld = "Old Password";
+const String changePasswordNew = "New Password";
+const String changePasswordConform = "Confirm Password";
+
+
+
 
 
 

@@ -10,6 +10,8 @@ class CustomBtnNew extends StatefulWidget {
   final double height;
   final double width;
   final Color color;
+  final Color textColor;
+  final RoundedRectangleBorder rectangleBorder;
   final bool isLoading;
 
   final Function() onTap;
@@ -19,7 +21,8 @@ class CustomBtnNew extends StatefulWidget {
       required this.height,
       required this.width,
       required this.onTap,
-      required this.color,
+      required this.color, required this.textColor,
+        required this.rectangleBorder,
       this.isLoading = false});
 
   @override
@@ -31,12 +34,9 @@ class _CustomBtnNewState extends State<CustomBtnNew> {
   Widget build(BuildContext context) {
     return ElevatedButton(
 
-      style: ElevatedButton.styleFrom(
-elevation: 0,
+      style: ElevatedButton.styleFrom(elevation: 0,
           backgroundColor: widget.isLoading ? ColorConstant.c3Color : widget.color,
-          shape: RoundedRectangleBorder(
-            side: BorderSide(color: ColorConstant.buttonBorder,width: 1.3),
-            borderRadius: BorderRadius.circular(23),)),
+          shape:  widget.rectangleBorder),
       onPressed: widget.onTap,
       child: Container(
         alignment: Alignment.center,
@@ -60,7 +60,7 @@ elevation: 0,
                 title: widget.title,
                 size: 14,
                 fontFamily: celiaRegular,
-                color: ColorConstant.blackColor,
+                color: widget.textColor,
                 fontWeight: FontWeight.w600),
           ],
         ),

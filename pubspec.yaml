@@ -40,6 +40,7 @@ dependencies:
   flutter_easyloading: ^3.0.5
   flutter_onboarding_slider: ^1.0.10
   country_picker: ^2.0.21
+  webview_flutter: ^2.0.14
 
 dev_dependencies:
   flutter_test:
